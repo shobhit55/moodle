@@ -1,0 +1,7 @@
+<a href="http://127.0.0.1:8000/accounts/">Home </a><br><a href="http://127.0.0.1:8000/logout/">logout</a>
+<form action="http://127.0.0.1:8000/accounts/moodle_stud/course_add/" method="POST"> {% csrf_token %}
+    Course Code<input type="text" name="code">
+    <button type="submit"> submit</button>
+</form>
+<br>
+<a href="http://127.0.0.1:8000/accounts/moodle_stud/">Back</a>

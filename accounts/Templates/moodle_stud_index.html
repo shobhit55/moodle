@@ -1,0 +1,32 @@
+<a href="http://127.0.0.1:8000/accounts/">Home </a><br><a href="http://127.0.0.1:8000/logout/">logout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moodle Stud Homepage</title>
+</head>
+<body>
+<ul>
+{% for course in all_courses%}
+    <li>{{course.course_name}} - {{course.course_code}}</li>
+{%endfor%}
+</ul><br>
+
+Courses floated:<br>
+<ul>
+{% for course in all_courses_all %}
+    <li>{{course.course_code}}-{{course.course_name}}</li>
+{% endfor %}
+</ul><br>
+
+Messages<br>
+<ul>
+{% for message in all_messages %}
+    <li>{{message.course.course_code}}-{{message.message}}</li>
+{% endfor %}
+</ul>
+
+<a href="/accounts/moodle_stud/course_add/">Add Course</a>
+<a href="/accounts/moodle_stud/course_drop/">Drop Course</a>
+</body>
+</html>
